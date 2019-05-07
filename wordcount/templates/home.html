@@ -1,12 +1,43 @@
-<h1>안녕하세요. 여기에 글을 작성해보던가 말던가.</h1>
-<h2>너가 여기 글을 쓴다면 나는 한번 니 글자가 몇개인지 세볼게! 꺄르륵</h2>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Ahyun's page</title>
+</head>
+<body>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<!-- 'about' 설명 페이지로 넘어가기-->
-<a href="{%url 'about'%}">about</a>
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+<div class="container">
+<br>
+<br>
+<nav class="navbar navbar-inverse">
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="{%url 'about'%}">about</a></li>
+</ul>
+</nav>
+<br>
+<h2>안녕하세요. 이 사이트는 단어의 수를 세는 사이트입니다.</h2>
+<h5>단어는 띄어쓰기를 기준으로 분류되니 올바른 띄어쓰기를 사용해주세요.</h5>
+<h5>동일한 단어가 몇 개 있는지 알 수 있습니다.</h5>
+<h5>제작자에 대해 알고 싶다면 상단에 있는 <a href="{%url 'about'%}">about</a> 을 클릭해 주세요</h5>
 
 <!-- 글 작성할 폼 만들기-->
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
 <form action="{%url 'result'%}">
-    <textarea name='fulltext' cols="200" rows='30'></textarea>
+    <textarea name='fulltext' cols="180" rows='25'></textarea>
     <!--결과 페이지로 넘기기-->
-    <input type='submit' value='글자수세기'>
+    <br>
+    <br><input type="submit" class="btn btn-info" value="단어수세기" >
+
 </form>
+</div>
+</body>
+</html>

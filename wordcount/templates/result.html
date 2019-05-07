@@ -1,21 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<!-- 홈으로 돌아가는 링크 -->
-<a href="{%url 'home'%}">home으로 돌아가기</a>
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+<div class="container">
+<br>
 <!-- 입력한 텍스트 갯수 -->
-<h1>입력한 텍스트 갯수는 <!--0000개--> {{total}} 개야! </h1>
+<h2><p class="text-danger">입력한 텍스트 수는 <!--0000개--> {{total}} 개야</p></h2>
 
 <!-- 내가 입력했던 텍스트 불러오기 -->
-<br><br>
-<h1>내가 적은 텍스트 :</h1>
+<br><h3><p class="text-info">적은 텍스트 :</p></h3>
 {{full}}
 
 <!-- 단어가 몇 개 있는지 보여주기 -->
-<br><br>
-<h1>단어 개수는? :</h1>
 <br>
+<h3><p class="text-info">단어 개수는? :</p></h3>
 <!-- 단어 카운트 내용 -->
 {%for word, howmany in count %}
 {{word}} : {{howmany}}
 <br>
 {%endfor%}
+<br>
+<h4><a href="{%url 'home'%}">home으로 돌아가기</a></h4>
+</body>
+</html>
